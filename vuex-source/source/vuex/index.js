@@ -89,16 +89,6 @@ function applyMixin(Vue) {
   }
 }
 
-function vuexInit() {
-  const options = this.$options
-  // store injection
-  if (options && options.store) {
-    this.$store = options.store
-  } else if (options.parent && options.parent.$store) {
-    this.$store = options.parent.$store
-  }
-}
-
 export default {
   install,
   Store,
